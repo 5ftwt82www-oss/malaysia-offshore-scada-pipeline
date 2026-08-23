@@ -1,0 +1,15 @@
+[2026-08-23T12:16:25.241+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: malaysia_offshore_scada_pipeline.simulate_scada_telemetry scheduled__2026-08-23T11:00:00+00:00 [queued]>
+[2026-08-23T12:16:25.252+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: malaysia_offshore_scada_pipeline.simulate_scada_telemetry scheduled__2026-08-23T11:00:00+00:00 [queued]>
+[2026-08-23T12:16:25.252+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-08-23T12:16:25.260+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): simulate_scada_telemetry> on 2026-08-23 11:00:00+00:00
+[2026-08-23T12:16:25.264+0000] {standard_task_runner.py:60} INFO - Started process 188 to run task
+[2026-08-23T12:16:25.268+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'malaysia_offshore_scada_pipeline', 'simulate_scada_telemetry', 'scheduled__2026-08-23T11:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/offshore_scada_pipeline_dag.py', '--cfg-path', '/tmp/tmpmdhsyqxq']
+[2026-08-23T12:16:25.269+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask simulate_scada_telemetry
+[2026-08-23T12:16:25.297+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-08-23T12:16:25.334+0000] {task_command.py:423} INFO - Running <TaskInstance: malaysia_offshore_scada_pipeline.simulate_scada_telemetry scheduled__2026-08-23T11:00:00+00:00 [running]> on host c421ef7dfe41
+[2026-08-23T12:16:25.406+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='malaysia_offshore_scada_pipeline' AIRFLOW_CTX_TASK_ID='simulate_scada_telemetry' AIRFLOW_CTX_EXECUTION_DATE='2026-08-23T11:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-08-23T11:00:00+00:00'
+[2026-08-23T12:16:25.414+0000] {logging_mixin.py:188} INFO - ✅ Generated 20 SCADA sensor records at /opt/***/data/raw_scada.csv
+[2026-08-23T12:16:25.415+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-08-23T12:16:25.674+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=malaysia_offshore_scada_pipeline, task_id=simulate_scada_telemetry, execution_date=20260823T110000, start_date=20260823T121625, end_date=20260823T121625
+[2026-08-23T12:16:25.688+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-08-23T12:16:25.702+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

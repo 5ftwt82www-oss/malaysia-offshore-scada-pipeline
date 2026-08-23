@@ -1,0 +1,21 @@
+timestamp,well_id,field_location,basin,casing_pressure_psi,gas_flow_mmcfd,temperature_celsius,h2s_concentration_ppm,pressure_drop_flag,toxic_h2s_alert,operational_status
+2026-08-23 13:00:01,KASAWARI-G01,Kasawari,Central_Luconia,2898.19,42.7,86.48,3.06,False,False,NORMAL
+2026-08-23 13:00:01,KASAWARI-G02,Kasawari,Central_Luconia,2845.84,47.28,89.01,1.08,False,False,NORMAL
+2026-08-23 13:00:01,KASAWARI-G03,Kasawari,Central_Luconia,2722.92,45.18,85.89,0.77,False,False,NORMAL
+2026-08-23 13:00:01,KASAWARI-G04,Kasawari,Central_Luconia,2604.23,52.24,83.42,0.32,False,False,NORMAL
+2026-08-23 13:00:01,KASAWARI-G05,Kasawari,Central_Luconia,2624.55,44.4,80.5,6.63,False,False,NORMAL
+2026-08-23 13:00:01,KASAWARI-G06,Kasawari,Central_Luconia,2969.8,45.03,83.42,0.17,False,False,NORMAL
+2026-08-23 13:00:01,KASAWARI-G07,Kasawari,Central_Luconia,2900.41,44.14,82.65,0.49,False,False,NORMAL
+2026-08-23 13:00:01,KASAWARI-G08,Kasawari,Central_Luconia,2823.64,49.82,85.0,1.19,False,False,NORMAL
+2026-08-23 13:00:01,KASAWARI-G09,Kasawari,Central_Luconia,2692.9,30.59,83.42,0.71,False,False,NORMAL
+2026-08-23 13:00:01,KASAWARI-G10,Kasawari,Central_Luconia,2683.92,39.57,83.13,0.37,False,False,NORMAL
+2026-08-23 13:00:01,E11-HUB-G01,E11_Hub,Central_Luconia,2628.28,41.55,85.63,1.27,False,False,NORMAL
+2026-08-23 13:00:01,E11-HUB-G02,E11_Hub,Central_Luconia,2901.53,50.18,86.21,7.48,False,False,NORMAL
+2026-08-23 13:00:01,E11-HUB-G03,E11_Hub,Central_Luconia,2837.71,46.62,86.96,1.27,False,False,NORMAL
+2026-08-23 13:00:01,E11-HUB-G04,E11_Hub,Central_Luconia,2625.71,49.77,88.37,0.58,False,False,NORMAL
+2026-08-23 13:00:01,E11-HUB-G05,E11_Hub,Central_Luconia,3088.08,42.89,85.39,0.96,False,False,NORMAL
+2026-08-23 13:00:01,E11-HUB-G06,E11_Hub,Central_Luconia,1052.75,9.88,83.98,4.56,True,False,WARNING_PRESSURE_DROP
+2026-08-23 13:00:01,E11-HUB-G07,E11_Hub,Central_Luconia,2583.78,42.05,83.19,5.11,False,False,NORMAL
+2026-08-23 13:00:01,E11-HUB-G08,E11_Hub,Central_Luconia,1192.74,9.4,89.51,6.44,True,False,WARNING_PRESSURE_DROP
+2026-08-23 13:00:01,E11-HUB-G09,E11_Hub,Central_Luconia,2738.51,44.29,87.03,3.31,False,False,NORMAL
+2026-08-23 13:00:01,E11-HUB-G10,E11_Hub,Central_Luconia,2946.79,40.94,87.29,2.0,False,False,NORMAL
