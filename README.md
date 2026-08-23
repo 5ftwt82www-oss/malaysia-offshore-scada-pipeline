@@ -5,43 +5,19 @@ An end-to-end batch data engineering pipeline built with **Apache Airflow, Pytho
 ---
 
 ## 🏗️ Architecture Overview
-                 [ OpenDOSM API ]
-         (Malaysia Monthly Gas Production)
-                         │
-                         ▼
-┌───────────────────────────────────────────────────────────────┐
-│                  APACHE AIRFLOW (Docker)                      │
-│                                                               │
-│   ┌───────────────────────────┐   ┌────────────────────────┐  │
-│   │ Task 1: SCADA Generator   │   │ Task 2: Ingest DOSM    │  │
-│   │ (Kasawari & E11 Fields)   │   │ (National Benchmarks)  │  │
-│   └─────────────┬─────────────┘   └───────────┬────────────┘  │
-│                 │                             │               │
-│                 ▼                             │               │
-│   ┌───────────────────────────────────────────┴────────────┐  │
-│   │ Task 3: Data Quality & Anomaly Detection Logic         │  │
-│   │ (Pressure Drop & Toxic H2S Gas Leak Alerts)            │  │
-│   └───────────────────────────┬────────────────────────────┘  │
-│                               │                               │
-│                               ▼                               │
-│   ┌────────────────────────────────────────────────────────┐  │
-│   │ Task 4: Export Partitioned Parquet to S3               │  │
-│   └───────────────────────────┬────────────────────────────┘  │
-└───────────────────────────────┼───────────────────────────────┘
-                                │
-                                ▼
-┌───────────────────────────────────────────────────────────┐
-│                  AMAZON S3 DATA LAKE                      │
-│                                                           │
-│  s3://malaysia-offshore-scada-erlangga/gold/scada/        │
-│  └── field_location=Kasawari/year=2026/month=08/*.parquet │
-└─────────────────────────────┬─────────────────────────────┘
-                              │
-                              ▼
-                  ┌───────────────────────┐
-                  │    AMAZON ATHENA      │
-                  │  (Serverless SQL)     │
-                  └───────────────────────┘
+```mermaid
+flowchart TD
+    A[OpenDOSM API\nMalaysia Monthly Gas Production] --> C
+    B[SCADA Telemetry Generator\nKasawari & E11 Fields] --> C
+    
+    subgraph Airflow[Apache Airflow Orchestrator]
+        C[Task 3: Data Quality & Anomaly Gate\nPressure Drop & Toxic H2S Gas Leak Alerts]
+        C --> D[Task 4: Parquet Conversion & S3 Exporter]
+    end
+    
+    D --> E[(Amazon S3 Data Lake\nHive Partitioned Parquet)]
+    E --> F[Amazon Athena\nServerless SQL Engine]
+```
 
 ---
 
